@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/otn/loadConf$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL", 
+        "pattern": "^https?://gateway\\.36kr\\.com/api/adx/ad/show$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://app\\.58\\.com/api/home/(advertising|appadv)$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://tiebac\\.baidu\\.com/c/f/ad/getFeedAd$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://mime\\.baidu\\.com/v\\d+/IosStart/getStartInfo$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://pan\\.baidu\\.com/act/api/activityentry$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://app\\.bilibili\\.com/x/v2/(splash|search/default)$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://api\\.douban\\.com/.+/iflow_ad$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://acs\\.m\\.taobao\\.com/gw/mtop\\.trip\\.activity\\.querytmsresources/"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/amap/business/"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://api\\.m\\.jd\\.com/client\\.action\\?functionId=start$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/rest/n/feed/splash$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/api/app/.+/splash$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/cpm/api/v\\d+/advertvert_distribution/get_all_advertise$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/vv/v\\d+/splash$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/eapi/ad/"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/api/container/getIndex\\?containerid=.*ad$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://.+/api/v\\d+/splash$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://ad\\.10086\\.cn/.+$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://adx\\.10086\\.cn/.+$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "URL",
+        "pattern": "^https?://m\\.client\\.10010\\.com/mobileService/.+ad$"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ad.10010.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ad.12306.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ad.360.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ad.xiaomi.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "admaster.com.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "adsmind.apdcdn.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "adx.adxweb.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "app-ad.variflight.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "applog.uc.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "appnext.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "appodeal.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "atanx.alicdn.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "bdapi.ads.oppo.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "cdn.optaim.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "click.aliyun.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "clickc.admaster.com.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "cm.e.qq.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "cpro.baidustatic.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "deliver.ifeng.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "doubleclick.net"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "etl.xlmc.sec.miui.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "g.doubleclick.net"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "googleadservices.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "googlesyndication.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "gtgj-air.oss-cn-hangzhou.aliyuncs.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "gdt.qq.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "img.zuifuli.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.b612.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.gifshow.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.kajicam.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.kuaishequ.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.nimo.tv"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.snssdk.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.starcloud.kgimg.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.tiktokv.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log.zijieapi.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "log1.avecmedia.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "mopnativeadv.037201.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "msg.umengcloud.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "msspjh.emarbox.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "openx.net"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "pub.se.360.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "rtb-useast.adx1.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "sdkapp.mobile.sina.cn"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ssl-cdn.static.browser.qq.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "static-ssl.mediav.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "track.sohu.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ulog.gifshow.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ulog.ksapisrv.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ulog.snssdk.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ulog.tiktokv.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ulog.zijieapi.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "umengacs.m.taobao.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "umengcloud.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "up-hl.3g.qq.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ur-1.tapdb.net"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "ur.tapdb.net"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "watson.telemetry.microsoft.com"
+      },
+      "action": "REJECT"
+    },
+    {
+      "condition": {
+        "type": "Domain",
+        "pattern": "www.googleadservices.com"
+      },
+      "action": "REJECT"
+    }
+  ]
+}
