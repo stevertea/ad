@@ -1,0 +1,159 @@
+# Stash广告拦截规则 - 墨鱼去开屏V2.0转换版
+# 转换自：https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
+# 生成时间：2024年
+# 适用Stash版本：v1.12+
+
+[General]
+# 通用设置
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, captive.apple.com
+tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+
+dns-server = system, 223.5.5.5, 119.29.29.29
+encrypted-dns-server = quic://dns.alidns.com:853, https://doh.pub/dns-query
+
+[Rule]
+# ========== 通用广告拦截规则 ==========
+
+# 基础广告域名拦截
+DOMAIN-SUFFIX,ad.10010.com,REJECT
+DOMAIN-SUFFIX,ad.12306.com,REJECT
+DOMAIN-SUFFIX,ad.360.cn,REJECT
+DOMAIN-SUFFIX,ad.xiaomi.com,REJECT
+DOMAIN-SUFFIX,admaster.com.cn,REJECT
+DOMAIN-SUFFIX,adsmind.apdcdn.com,REJECT
+DOMAIN-SUFFIX,adx.adxweb.com,REJECT
+DOMAIN-SUFFIX,app-ad.variflight.com,REJECT
+DOMAIN-SUFFIX,applog.uc.cn,REJECT
+DOMAIN-SUFFIX,appnext.com,REJECT
+DOMAIN-SUFFIX,appodeal.com,REJECT
+DOMAIN-SUFFIX,atanx.alicdn.com,REJECT
+DOMAIN-SUFFIX,bdapi.ads.oppo.com,REJECT
+DOMAIN-SUFFIX,cdn.optaim.com,REJECT
+DOMAIN-SUFFIX,click.aliyun.com,REJECT
+DOMAIN-SUFFIX,clickc.admaster.com.cn,REJECT
+DOMAIN-SUFFIX,cm.e.qq.com,REJECT
+DOMAIN-SUFFIX,cpro.baidustatic.com,REJECT
+DOMAIN-SUFFIX,deliver.ifeng.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,etl.xlmc.sec.miui.com,REJECT
+DOMAIN-SUFFIX,g.doubleclick.net,REJECT
+DOMAIN-SUFFIX,googleadservices.com,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+DOMAIN-SUFFIX,gtgj-air.oss-cn-hangzhou.aliyuncs.com,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
+DOMAIN-SUFFIX,img.zuifuli.com,REJECT
+DOMAIN-SUFFIX,log.b612.cn,REJECT
+DOMAIN-SUFFIX,log.gifshow.com,REJECT
+DOMAIN-SUFFIX,log.kajicam.com,REJECT
+DOMAIN-SUFFIX,log.kuaishequ.com,REJECT
+DOMAIN-SUFFIX,log.nimo.tv,REJECT
+DOMAIN-SUFFIX,log.snssdk.com,REJECT
+DOMAIN-SUFFIX,log.starcloud.kgimg.com,REJECT
+DOMAIN-SUFFIX,log.tiktokv.com,REJECT
+DOMAIN-SUFFIX,log.zijieapi.com,REJECT
+DOMAIN-SUFFIX,log1.avecmedia.com,REJECT
+DOMAIN-SUFFIX,mopnativeadv.037201.com,REJECT
+DOMAIN-SUFFIX,msg.umengcloud.com,REJECT
+DOMAIN-SUFFIX,msspjh.emarbox.com,REJECT
+DOMAIN-SUFFIX,openx.net,REJECT
+DOMAIN-SUFFIX,pub.se.360.cn,REJECT
+DOMAIN-SUFFIX,rtb-useast.adx1.com,REJECT
+DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
+DOMAIN-SUFFIX,ssl-cdn.static.browser.qq.com,REJECT
+DOMAIN-SUFFIX,static-ssl.mediav.com,REJECT
+DOMAIN-SUFFIX,track.sohu.com,REJECT
+DOMAIN-SUFFIX,ulog.gifshow.com,REJECT
+DOMAIN-SUFFIX,ulog.ksapisrv.com,REJECT
+DOMAIN-SUFFIX,ulog.snssdk.com,REJECT
+DOMAIN-SUFFIX,ulog.tiktokv.com,REJECT
+DOMAIN-SUFFIX,ulog.zijieapi.com,REJECT
+DOMAIN-SUFFIX,umengacs.m.taobao.com,REJECT
+DOMAIN-SUFFIX,umengcloud.com,REJECT
+DOMAIN-SUFFIX,up-hl.3g.qq.com,REJECT
+DOMAIN-SUFFIX,ur-1.tapdb.net,REJECT
+DOMAIN-SUFFIX,ur.tapdb.net,REJECT
+DOMAIN-SUFFIX,watson.telemetry.microsoft.com,REJECT
+DOMAIN-SUFFIX,www.googleadservices.com,REJECT
+
+# ========== 应用启动页广告拦截 ==========
+
+# 12306
+URL-REGEX,^https?://.+/otn/loadConf$,REJECT
+
+# 36氪
+URL-REGEX,^https?://gateway\.36kr\.com/api/adx/ad/show$,REJECT
+
+# 58同城
+URL-REGEX,^https?://app\.58\.com/api/home/(advertising|appadv)$,REJECT
+
+# 百度贴吧
+URL-REGEX,^https?://tiebac\.baidu\.com/c/f/ad/getFeedAd$,REJECT
+
+# 百度翻译
+URL-REGEX,^https?://mime\.baidu\.com/v\d+/IosStart/getStartInfo$,REJECT
+
+# 百度网盘
+URL-REGEX,^https?://pan\.baidu\.com/act/api/activityentry$,REJECT
+
+# 哔哩哔哩
+URL-REGEX,^https?://app\.bilibili\.com/x/v2/(splash|search/default)$,REJECT
+
+# 豆瓣
+URL-REGEX,^https?://api\.douban\.com/.+/iflow_ad$,REJECT
+
+# 飞猪
+URL-REGEX,^https?://acs\.m\.taobao\.com/gw/mtop\.trip\.activity\.querytmsresources/,REJECT
+
+# 高德地图
+URL-REGEX,^https?://.+/amap/business/,REJECT
+
+# 京东
+URL-REGEX,^https?://api\.m\.jd.com/client\.action\?functionId=start$,REJECT
+
+# 快手
+URL-REGEX,^https?://.+/rest/n/feed/splash$,REJECT
+
+# 美团
+URL-REGEX,^https?://.+/api/app/.+/splash$,REJECT
+
+# 什么值得买
+URL-REGEX,^https?://.+/cpm/api/v\d+/advertvert_distribution/get_all_advertise$,REJECT
+
+# 腾讯视频
+URL-REGEX,^https?://.+/vv/v\d+/splash$,REJECT
+
+# 网易云音乐
+URL-REGEX,^https?://.+/eapi/ad/,REJECT
+
+# 微博
+URL-REGEX,^https?://.+/api/container/getIndex\?containerid=.*ad$,REJECT
+
+# 知乎
+URL-REGEX,^https?://.+/api/v\d+/splash$,REJECT
+
+# 中国移动
+URL-REGEX,^https?://ad\.10086\.cn/.+$,REJECT
+URL-REGEX,^https?://adx\.10086\.cn/.+$,REJECT
+
+# 中国联通
+URL-REGEX,^https?://m\.client\.10010\.com/mobileService/.+ad$,REJECT
+
+# 中国电信
+URL-REGEX,^https?://.+/api/v\d+/splash$,REJECT
+
+# ========== 特殊处理规则 ==========
+
+# 需要脚本处理的规则（需配合Stash脚本功能）
+# 注意：以下规则需要相应的JS脚本支持
+# URL-REGEX,^https?://api\.369cx\.cn/v\d+/Splash/GetSplashAd$,REJECT,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js
+
+# ========== 最终规则 ==========
+
+# 国内直连
+DOMAIN-SUFFIX,cn,DIRECT
+DOMAIN-SUFFIX,中国,DIRECT
+DOMAIN-SUFFIX,公司,DIRECT
+DOMAIN-SUFFIX,网络,DIRECT
+
+# GEOIP,CN,DIRECT
+FINAL,DIRECT
